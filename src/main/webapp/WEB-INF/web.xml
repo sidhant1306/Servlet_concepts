@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+<!--
+        // WE DON'T EVEN NEED ALL THIS, WE CAN JUST ASSIGN WHAT SERVER TO CALL USING ANNOTATIONS :
+-->
+<!--
+    <servlet>
+        <servlet-name>demo</servlet-name>   &lt;!&ndash;this is the servlet name we want to refer with&ndash;&gt;
+        <servlet-class>com.example.servletsjsp_learning.AddServlet</servlet-class>  &lt;!&ndash;this hold the whole class name for the servlet(AddServlet is the name before that the package is written&ndash;&gt;
+
+        &lt;!&ndash;Servlet config : &ndash;&gt;
+        &lt;!&ndash;Now as we are adding this in the AddServlet class, the value for parameters in this will overwrite any other context value for this particular servlet&ndash;&gt;
+        <init-param>
+            <param-name>name</param-name>
+            <param-value>Sonam</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>demo</servlet-name>
+        <url-pattern>/add</url-pattern>     &lt;!&ndash; it holds the page url we are redirecting our servlet to &ndash;&gt;
+    </servlet-mapping>
+
+-->
+
+    <!--2nd thing : -->
+
+   <!-- <servlet>
+        <servlet-name>square</servlet-name>
+        <servlet-class>com.example.servletsjsp_learning.SqServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>square</servlet-name>
+        <url-pattern>/sq</url-pattern>  &lt;!&ndash;This says whenever there is a request for a servlet, call the Servlet defined in the above servlet-class &ndash;&gt;
+    </servlet-mapping>
+
+    &lt;!&ndash;SERVLET CONTEXT : &ndash;&gt;
+-->
+    <context-param>
+        <param-name>name</param-name>
+        <param-value>User</param-value>      <!-- Default name for "name" parameter for all servlets-->
+    </context-param>
+</web-app>
